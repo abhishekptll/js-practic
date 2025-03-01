@@ -23,7 +23,7 @@ if(n%2==0){
 let user = parseInt(prompt("enter a no"))
 
 if( user >=18){
-    console.log("eligible to vote");
+    console.log("eligible to vote")
 }else{
-    console.log("not eligible to vote");
+    console.log("not eligible to vote")
 }
