@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        button:nth-child(2) {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:nth-child(3) {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="cou">0</h1>
+    <button onclick="start()">Start</button>
+    <button onclick="stp()">Stop</button>
+
+    <script>
+        let ct = 0;
+        let st;
+        function start() {
+            let but = document.querySelector("#cou");
+            st = setInterval(() => {
+                but.innerHTML = ct++;
+            }, 500);
+        }
+        function stp() {
+            clearInterval(st);
+        }
+    </script>
+</body>
+</html>
