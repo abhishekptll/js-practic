@@ -5,6 +5,8 @@ function frmdata(){
   let name = document.querySelector("#name").value;
   let email = document.querySelector("#email").value;
   let age = document.querySelector("#age").value;
+  let pass = document.querySelector("#pass").value;
+  let contact = document.querySelector("#contact").value;
 
   if(name== ""){
     alert("please enter your name");
@@ -21,7 +23,7 @@ function frmdata(){
     error.innerHTML="please enter email"
     return false;
   }
-  else if(!(email.includes("gmail")||email.includes("yahoo")) ){
+  else if(!(email.includes("@gmail")||email.includes("@yahoo")) ){
     alert("please enter valid email ");
     document.querySelector("#email").focus()
     return false;
@@ -39,6 +41,27 @@ function frmdata(){
   }
   else if( isNaN(age)){
     alert("please enter age in number")
+  }
+
+  else if(pass==""){
+    alert("please fill password");
+  }
+  else if(!(pass.match(/["!@#$%^&*()_+"]/))){
+    alert("please enter special character")
+    document.querySelector("#pass").focus()
+    return false;
+  }
+
+  else if(contact==""){
+    alert("please enter contact");
+    document.querySelector("#contact").focus()
+    return false;
+  }
+
+  else if(contact.length>10||contact.length<10){
+    alert("please enter a valid contact")
+    document.querySelector("#contact").focus()
+    return false;
   }
 
 }
