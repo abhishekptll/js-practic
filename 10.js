@@ -42,8 +42,8 @@ let arr =[1,2,3,4];
 arr.push("last element","last second");
 arr.unshift("first element","first second");
 
-console.log(arr);
+//console.log(arr);
 arr.pop();
-console.log(arr);
+//console.log(arr);
 arr.shift();
 console.log(arr);
