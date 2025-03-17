@@ -38,12 +38,24 @@
 
 // console.log(arr);
 
-let arr =[1,2,3,4];
-arr.push("last element","last second");
-arr.unshift("first element","first second");
+// let arr =[1,2,3,4];
+// arr.push("last element","last second");
+// arr.unshift("first element","first second");
 
-console.log(arr);
-arr.pop();
-console.log(arr);
-arr.shift();
-console.log(arr);
+// console.log(arr);
+// arr.pop();
+// console.log(arr);
+// arr.shift();
+// console.log(arr);
+
+let arr = [1,2,3,45,6,7,89,10,34,76,87];
+
+ let copy=arr.slice(2,11);
+
+ 
+ for(el of copy){
+    if(el%2==0){
+        console.log(el);
+
+    }
+ }  
